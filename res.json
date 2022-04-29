@@ -1,0 +1,327 @@
+{
+    "Plants": [{
+        "shortName": ["Snake Plant"],
+        "fullName": ["Sansevieria; Mother-in-law's tongue; Viper's bowstring hemp"]
+    }, {
+        "shortName": ["Kentia Palm"],
+        "fullName": ["Howea forsteriana; Thatch palm; Paradise palm plant"]
+    }, {
+        "shortName": ["Peace Lily"],
+        "fullName": ["Spathiphyllum wallisii; White sails"]
+    }, {
+        "shortName": ["Devil's ivy"],
+        "fullName": ["Devils' Ivy; Epipremnum aureum; Ceylon creeper; Golden Pothos"]
+    }, {
+        "shortName": ["Parlour Palm"],
+        "fullName": ["Chamaedorea elegans; Neanthe bella palm; Parlour palm"]
+    }, {
+        "shortName": ["Corn plant"],
+        "fullName": ["Dracaena fragrans; Massangeana; Janet Craig; Corn plant; Dragon plant; Dragon tree"]
+    }, {
+        "shortName": ["Boston Fern"],
+        "fullName": ["Sword fern; Nephrolepis exaltata"]
+    }, {
+        "shortName": ["Aspidistra"],
+        "fullName": ["Cast iron plant; Bar room plant; Aspidistra Elatior"]
+    }, {
+        "shortName": ["Strelitzia Nicolai"],
+        "fullName": ["White Bird of Paradise; Wild Banana"]
+    }, {
+        "shortName": ["Zamioculcas zamiifolia"],
+        "fullName": ["ZZ plant; Zanzibar gem; Fern arum"]
+    }, {
+        "shortName": ["Monstera Adansonii"],
+        "fullName": ["Monkey face plant; Monkey plant; Mini Swiss cheese plant"]
+    }, {
+        "shortName": ["Dracaena fragrans"],
+        "fullName": ["Dracaena Fragrans; Massangeana; Janet Craig; Dragon Plant; Dragon Tree"]
+    }, {
+        "shortName": ["Fiddle-leaf fig"],
+        "fullName": ["Ficus lyrata; Banjo fig; Ficus lyrata bambino"]
+    }, {
+        "shortName": ["Chinese Money Plant"],
+        "fullName": ["Pilea; Pancake plant"]
+    }, {
+        "shortName": ["Succulent plant"],
+        "fullName": [""]
+    }, {
+        "shortName": ["Pachira aquatica"],
+        "fullName": [""]
+    }, {
+        "shortName": ["Tradescantia Nanouk"],
+        "fullName": [""]
+    }, {
+        "shortName": ["English Ivy"],
+        "fullName": ["Hedera Helix; English Ivy; Common Ivy; European Ivy."]
+    }, {
+        "shortName": ["Chamaerops Humilis"],
+        "fullName": ["Dwarf fan palm; Mediterranean fan palm; African hair palm; European fan palm; Palm Cabbage"]
+    }, {
+        "shortName": ["Satin Pothos"],
+        "fullName": ["Scindapsus Pictus; Silk Pothos"]
+    }, {
+        "shortName": ["Dracaena Marginata"],
+        "fullName": ["Corn plant; Massangeana; Janet Craig; Dragon plant; Dragon tree"]
+    }, {
+        "shortName": [],
+        "fullName": []
+    }, {
+        "shortName": ["Sweetheart plant"],
+        "fullName": ["Hoya hearts; Hoya kerii; Lucky heart; Wax heart; Lucky heart"]
+    }, {
+        "shortName": ["Curly Spider Plant"],
+        "fullName": ["Chlorophytum; Curly Spider Plant; Variegated Spider Plant; Airplane Plant"]
+    }, {
+        "shortName": ["Livistona rotundifolia"],
+        "fullName": [""]
+    }, {
+        "shortName": ["Maidenhair fern"],
+        "fullName": ["Adiantum; Venus' hair fern"]
+    }, {
+        "shortName": ["Calathea Makoyana"],
+        "fullName": [""]
+    }, {
+        "shortName": ["String of nickels"],
+        "fullName": ["Dischidia imbricata; Thruppence urn plant; Shingle plant"]
+    }, {
+        "shortName": ["Ficus benjamina"],
+        "fullName": ["Ficus Benjamina; Benjamin tree; Java fig; Java tree; Small-leaved rubber plant; Tropic laurel"]
+    }, {
+        "shortName": ["Cactus"],
+        "fullName": [""]
+    }, {
+        "shortName": ["Lemon Tree"],
+        "fullName": [""]
+    }, {
+        "shortName": [],
+        "fullName": []
+    }, {
+        "shortName": ["Calathea Orbifolia"],
+        "fullName": [""]
+    }, {
+        "shortName": ["Philodendron Scandens"],
+        "fullName": ["Heart-leaf; Sweetheart plant"]
+    }, {
+        "shortName": ["Bay tree"],
+        "fullName": ["Laurus Nobilis; Poet's laurel; Roman laurel; True laurel; Victor's laurel"]
+    }, {
+        "shortName": [],
+        "fullName": []
+    }, {
+        "shortName": [],
+        "fullName": []
+    }, {
+        "shortName": ["Syngonium Neon Robusta"],
+        "fullName": [""]
+    }, {
+        "shortName": ["Neon pothos"],
+        "fullName": ["Epipremnum aureum neon; neon devil’s ivy"]
+    }, {
+        "shortName": ["Dracaena fragrans"],
+        "fullName": ["Dracaena Fragrans; Massangeana; Janet Craig; Corn Plant; Dragon Plant; Dragon Tree"]
+    }, {
+        "shortName": ["Rubber Plant"],
+        "fullName": ["Variegated Rubber plant; Ficus robusta"]
+    }, {
+        "shortName": ["elephant ear plant"],
+        "fullName": ["Alocasia Zebrina"]
+    }, {
+        "shortName": ["Lime tree"],
+        "fullName": [""]
+    }, {
+        "shortName": ["Calathea whitestar"],
+        "fullName": [""]
+    }, {
+        "shortName": ["Fishbone cactus"],
+        "fullName": [""]
+    }, {
+        "shortName": ["Aglaonema 'Silver Bay'"],
+        "fullName": ["Chinese Evergreen"]
+    }, {
+        "shortName": ["Fargesia Bamboo"],
+        "fullName": ["Fargesia Murieliae; Umbrella Bamboo"]
+    }, {
+        "shortName": [],
+        "fullName": []
+    }, {
+        "shortName": ["Variegated String of nickels"],
+        "fullName": ["Dischidia oiantha variegata; Thruppence urn plant; Shingle plant"]
+    }, {
+        "shortName": ["Maranta leuconeura"],
+        "fullName": [""]
+    }, {
+        "shortName": ["French Lavender"],
+        "fullName": ["Lavandula Stoechas; French Lavender; Spanish Lavender; Topped Lavender;"]
+    }, {
+        "shortName": ["Fittonia ruby lime"],
+        "fullName": [""]
+    }, {
+        "shortName": ["Olive tree"],
+        "fullName": ["Olea Europea; Common olive; Cultivated olive; European olive; Lady's oil"]
+    }, {
+        "shortName": ["Alocasia portodora"],
+        "fullName": ["Upright elephant ear"]
+    }, {
+        "shortName": [],
+        "fullName": []
+    }, {
+        "shortName": ["Fiddle-leaf fig"],
+        "fullName": ["Fiddle-leaf fig; Banjo fig"]
+    }, {
+        "shortName": ["Canary Island date palm"],
+        "fullName": ["Phoenix Canariensis; Canary date palm"]
+    }, {
+        "shortName": ["Calathea Sanderiana"],
+        "fullName": ["Pin Stripe Calathea"]
+    }, {
+        "shortName": ["Sweet orange tree"],
+        "fullName": [""]
+    }, {
+        "shortName": ["Calathea triostar"],
+        "fullName": ["Calathea Stromanthe Triostar; Stromanthe Sanguinea Triostar; Prayer plant"]
+    }, {
+        "shortName": ["Fittonia white forest flame"],
+        "fullName": [""]
+    }, {
+        "shortName": ["Tree Fern"],
+        "fullName": ["Dicksonia Antarctica"]
+    }, {
+        "shortName": ["Calathea"],
+        "fullName": ["Prayer plant; Calathea medallion"]
+    }, {
+        "shortName": ["Ficus altissima yellow gem"],
+        "fullName": [""]
+    }, {
+        "shortName": ["Anthurium"],
+        "fullName": ["Tail flower; Flamingo flower; Laceleaf; Anthurium Andraeanum"]
+    }, {
+        "shortName": ["Cycad"],
+        "fullName": ["Cycas Revoluta; Japanese sago palm"]
+    }, {
+        "shortName": ["Citrus calamondin"],
+        "fullName": ["Citrus calamondin"]
+    }, {
+        "shortName": ["Cocus nucifera"],
+        "fullName": [""]
+    }, {
+        "shortName": [],
+        "fullName": []
+    }, {
+        "shortName": ["Anthurium"],
+        "fullName": [""]
+    }, {
+        "shortName": ["Fatsia Japonica"],
+        "fullName": ["Glossy-leaf paper plant; Fatsi; Paperplant; Japanese aralia"]
+    }, {
+        "shortName": ["Calathea Zebrina"],
+        "fullName": ["Zebra Plant"]
+    }, {
+        "shortName": ["Philodendron White Wave"],
+        "fullName": [""]
+    }, {
+        "shortName": ["Kumquat tree"],
+        "fullName": ["Citrus japonica"]
+    }, {
+        "shortName": ["Phlebodium Aureum"],
+        "fullName": ["Blue star fern"]
+    }, {
+        "shortName": ["Anthurium Clarinervium"],
+        "fullName": ["Giant laceleaf"]
+    }, {
+        "shortName": ["Beaucarnea Recurvata \"Nolina\""],
+        "fullName": [""]
+    }, {
+        "shortName": ["Hoya wayetii tricolor"],
+        "fullName": [""]
+    }, {
+        "shortName": ["Fittonia skeleton"],
+        "fullName": [""]
+    }, {
+        "shortName": ["Ficus benhalensis"],
+        "fullName": [""]
+    }, {
+        "shortName": ["Bird’s nest fern"],
+        "fullName": ["Aspelenium nidus"]
+    }, {
+        "shortName": ["Cherry tree - (organic)"],
+        "fullName": ["Prunus avium ‘Regina’"]
+    }, {
+        "shortName": ["Sansevieria Masoniana victoria"],
+        "fullName": ["Whale fin plant; Shark fin plant; Mother-in-law’s tongue; Viper’s bowstring hemp"]
+    }, {
+        "shortName": ["Clematis 'Hagley hybrid'"],
+        "fullName": [""]
+    }, {
+        "shortName": ["Star Jasmine"],
+        "fullName": ["Trachelosporum Jasminoides; Climbing Jasmine; Confederate Jasmine; Chinese Jasmine; Trader’s Compass"]
+    }, {
+        "shortName": ["Asparagus 'Meyeri'"],
+        "fullName": [""]
+    }, {
+        "shortName": ["Sansevieria cylindrica"],
+        "fullName": ["Cylindrical snake plant"]
+    }, {
+        "shortName": ["Fig tree - (organic)"],
+        "fullName": ["Ficus gustissimo ‘Perretta’"]
+    }, {
+        "shortName": ["Blueberry - (organic)"],
+        "fullName": ["Vaccinium corymbosum 'Little Blue Wonder Bio'"]
+    }, {
+        "shortName": ["Cordyline red"],
+        "fullName": ["Cordyline Festival Burgundy"]
+    }, {
+        "shortName": ["Raspberry - (organic)"],
+        "fullName": ["Rubus ideus 'Little Sweet Sister'; Common raspberry"]
+    }, {
+        "shortName": ["Honeysuckle lonicera"],
+        "fullName": [""]
+    }, {
+        "shortName": ["Clematis armandii"],
+        "fullName": [""]
+    }, {
+        "shortName": ["Clematis - purple"],
+        "fullName": ["Clematis 'Olympia'"]
+    }, {
+        "shortName": ["Kiwiberry - (organic)"],
+        "fullName": [""]
+    }, {
+        "shortName": ["Aglaonema cutlass"],
+        "fullName": [""]
+    }, {
+        "shortName": ["Grape green (organic)"],
+        "fullName": ["Vitis vinifera ‘Johanniter'"]
+    }, {
+        "shortName": ["Yucca rostrata"],
+        "fullName": ["Beaked yucca"]
+    }, {
+        "shortName": ["Ficus ginseng"],
+        "fullName": [""]
+    }, {
+        "shortName": ["Pink Hydrangea Macrophylla"],
+        "fullName": ["Mophead Hydrangea, French Hydrangea, Hortensia"]
+    }, {
+        "shortName": ["Imperata cylindrica 'Red Baron'"],
+        "fullName": ["Japanese blood grass; Imperata cylindrica ‘Red Baron’"]
+    }, {
+        "shortName": ["Sedum spurium variegatum"],
+        "fullName": [""]
+    }, {
+        "shortName": ["Wisteria"],
+        "fullName": ["Wisteria ‘Blue Moon’"]
+    }, {
+        "shortName": ["Miscanthus sinensis Strictus"],
+        "fullName": ["Chinese silver grass"]
+    }, {
+        "shortName": [],
+        "fullName": []
+    }, {
+        "shortName": [],
+        "fullName": []
+    }, {
+        "shortName": ["White Hydrangea macrophylla"],
+        "fullName": ["Mophead Hydrangea, French Hydrangea, Hortensia"]
+    }, {
+        "shortName": ["Blue Hydrangea macrophylla"],
+        "fullName": ["Mophead Hydrangea, French Hydrangea, Hortensia"]
+    }]
+}

@@ -2,6 +2,7 @@ const puppeteer = require("puppeteer");
 const fs = require("fs").promises;
 const prompt = require("async-prompt");
 const util = require("util");
+const { exit } = require("process");
 const exec = util.promisify(require("child_process").exec);
 
 const mainURL =
@@ -21,13 +22,13 @@ const findPlantLinks = async () => {
   const page = await browser.newPage();
   var plantsLinks = [];
 
-  // var pages = [1, 2, 3];
-  var pages = [1];
+  var pages = [1, 2, 3];
+  // var pages = [1];
   for (var i of pages) {
     console.log(`Processing page ${Number(i)}`);
 
     var pageURL = `${mainURL + Number(i)}`;
-    await page.goto(pageURL);
+    await page.goto(pageURL, { timeout: 0 });
 
     plantsLinks = plantsLinks.concat(
       await page.$$eval(".card__header a", (anchors) =>
@@ -54,7 +55,8 @@ const extractPlantInfo = async (plantsLinks) => {
 
   for (var linkIndex in plantsLinks) {
     console.log(`Processed ${Number(linkIndex) + 1} of ${plantsLinks.length}`);
-    await page.goto(plantsLinks[linkIndex]);
+    await page.goto(plantsLinks[linkIndex], { timeout: 0 });
+
     const shortName = await page.$$eval(".hero-space__nickname", (anchors) =>
       [].map.call(anchors, (title) => title.innerText)
     );
@@ -63,9 +65,53 @@ const extractPlantInfo = async (plantsLinks) => {
       ".hero-space__pronunciation",
       (anchors) => [].map.call(anchors, (title) => title.innerText)
     );
+
+    const highlights = await page.$$eval(
+      ".hero-space__highlight-text",
+      (anchors) => [].map.call(anchors, (title) => title.innerText)
+    );
+
+    const likesSectionHeaders = await page.$$eval(
+      ".likes-section__text-content-like h5",
+      (anchors) => [].map.call(anchors, (title) => title.innerText)
+    );
+
+    const likesSectionValues = await page.$$eval(
+      ".likes-section__text-content-like p",
+      (anchors) => [].map.call(anchors, (title) => title.innerText)
+    );
+
+    var likesSection = {};
+    likesSectionHeaders.forEach(
+      (key, index) => (likesSection[key] = likesSectionValues[index])
+    );
+
+    const quickFactsSectionHeaders = await page.$$eval(
+      ".quick-facts-section__fact p strong",
+      (anchors) => [].map.call(anchors, (title) => title.innerText)
+    );
+
+    const quickFactsSectionValues = await page.$$eval(
+      ".quick-facts-section__fact p",
+      (anchors) => [].map.call(anchors, (title) => title.innerText)
+    );
+    var quickFactsSection = {};
+    quickFactsSectionHeaders.forEach(
+      (key, index) => (quickFactsSection[key] = quickFactsSectionValues[2 * index + 1])
+    );
+
+    const aboutText = await page.$$eval(
+      ".quick-facts-section__about-text--accordion",
+      (anchors) => [].map.call(anchors, (title) => title.innerText.replace("Did you know?", "\n\n").trim())
+    );
+
     var plant = {
       shortName: shortName,
       fullName: fullName,
+      highlights: highlights,
+      likesSection: likesSection,
+      quickFactsSection: quickFactsSection,
+      aboutText: aboutText,
     };
 
     json["Plants"].push(plant);
@@ -75,5 +121,7 @@ const extractPlantInfo = async (plantsLinks) => {
 };
 
 plantsLinks = findPlantLinks().then((x) => {
-  extractPlantInfo(x).then((x) => fs.writeFile("res.json", x));
+  extractPlantInfo(x).then((x) =>
+    fs.writeFile("res.json", x).then(() => exit())
+  );
 });

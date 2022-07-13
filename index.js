@@ -31,8 +31,8 @@ const findPlantLinks = async () => {
   const page = await browser.newPage();
   var plantsLinks = [];
 
-  // var pages = [1, 2, 3, 4];
-  var pages = [1];
+  var pages = [1, 2, 3, 4];
+  // var pages = [1];
   for (var i of pages) {
     console.log(`Processing page ${Number(i)}`);
 
@@ -61,6 +61,7 @@ const extractPlantInfo = async (plantsLinks) => {
 
   var json = {};
   json["Plants"] = [];
+  var plantsWithoutPhoto = [];
 
   for (var linkIndex in plantsLinks) {
     console.log(`Processed ${Number(linkIndex) + 1} of ${plantsLinks.length}`);
@@ -145,15 +146,34 @@ const extractPlantInfo = async (plantsLinks) => {
       try {
         await page.click(".size-selector-item");
         await page.click(".img-container");
-        const imageLinks = await page.$$eval(".preview-image img", (anchors) =>
+
+        var imageLinks = [];
+        imageLinks = await page.$$eval(".preview-plant", (anchors) =>
           [].map.call(anchors, (title) => title.src)
         );
 
+        if (imageLinks.length == 0) {
+          var i = 1;
+          while (imageLinks.length == 0) {
+            console.log(`${i} atempt`);
+            i++;
+            await page.reload();
+            await page.click(".size-selector-item");
+            await page.click(".img-container");
+            await page.waitForTimeout(1000);
+
+            imageLinks = await page.$$eval(".preview-plant", (anchors) =>
+              [].map.call(anchors, (title) => title.src)
+            );
+          }
+        }
+
         var flowerPath = `parsed_images/${name}.png`;
-        await page.waitForTimeout(1000);
+        console.log(imageLinks);
         await download(imageLinks[0], flowerPath);
       } catch (e) {
         console.error(e);
+        plantsWithoutPhoto.push(name);
         flowerLink = null;
       }
 
@@ -172,11 +192,14 @@ const extractPlantInfo = async (plantsLinks) => {
     }
   }
 
-  return JSON.stringify(json);
+  return JSON.stringify(json), plantsWithoutPhoto;
+};
+
+const writeToFiles = async (plantsJson, plantsWithoutPhoto) => {
+  fs.writeFile("res.json", plantsJson);
+  fs.writeFile("plant_without_photo.txt", plantsWithoutPhoto);
 };
 
 plantsLinks = findPlantLinks().then((x) => {
-  extractPlantInfo(x).then((x) =>
-    fs.writeFile("res.json", x).then(() => exit())
-  );
+  extractPlantInfo(x).then((x, y) => writeToFiles(x, y).then(() => exit()));
 });

@@ -144,7 +144,12 @@ const extractPlantInfo = async (plantsLinks) => {
       );
 
       try {
-        await page.click(".size-selector-item");
+        try {
+          await page.click(".size-selector-item");
+        } catch {
+          console.log("Try to find active pot");
+          await page.click(".size-selector-item active");
+        }
         await page.click(".img-container");
 
         var imageLinks = [];
@@ -172,7 +177,7 @@ const extractPlantInfo = async (plantsLinks) => {
         console.log(imageLinks);
         await download(imageLinks[0], flowerPath);
       } catch (e) {
-        console.error(e);
+        console.log(e);
         plantsWithoutPhoto.push(name);
         flowerLink = null;
       }
@@ -190,16 +195,17 @@ const extractPlantInfo = async (plantsLinks) => {
 
       json["Plants"].push(plant);
     }
+
+    break;
   }
 
-  return JSON.stringify(json), plantsWithoutPhoto;
-};
+  fs.writeFileSync("plant_without_photo.txt", plantsWithoutPhoto.join("\n"));
 
-const writeToFiles = async (plantsJson, plantsWithoutPhoto) => {
-  fs.writeFile("res.json", plantsJson);
-  fs.writeFile("plant_without_photo.txt", plantsWithoutPhoto);
+  return JSON.stringify(json);
 };
 
 plantsLinks = findPlantLinks().then((x) => {
-  extractPlantInfo(x).then((x, y) => writeToFiles(x, y).then(() => exit()));
+  extractPlantInfo(x).then((x) =>
+    fs.writeFileSync("res.json", x)
+  );
 });

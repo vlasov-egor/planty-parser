@@ -195,8 +195,6 @@ const extractPlantInfo = async (plantsLinks) => {
 
       json["Plants"].push(plant);
     }
-
-    break;
   }
 
   fs.writeFileSync("plant_without_photo.txt", plantsWithoutPhoto.join("\n"));
@@ -205,7 +203,5 @@ const extractPlantInfo = async (plantsLinks) => {
 };
 
 plantsLinks = findPlantLinks().then((x) => {
-  extractPlantInfo(x).then((x) =>
-    fs.writeFileSync("res.json", x)
-  );
+  extractPlantInfo(x).then((x) => fs.writeFileSync("res.json", x));
 });
